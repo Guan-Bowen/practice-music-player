@@ -1,0 +1,37 @@
+<!--
+    By Guan Bowen, Feb 29, 2022
+    A Vue 2.x practice project of music player
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- IE: 最新渲染模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <!-- 使部分浏览器采用高速模式渲染 -->
+    <meta name="renderer" content="webkit">
+    <!-- SEO -->
+    <title>Music Guan</title>
+    <meta name="description" content="A music-player practice of Guan, 2022/02/19">
+    <meta name="keywords" content="music, practice, player, download">
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180*180" href="./apple-touch-icon-180.png">
+    <link rel="apple-touch-icon" sizes="152*152" href="./apple-touch-icon-152.png">
+    <link rel="apple-touch-icon" sizes="114*114" href="./apple-touch-icon-114.png">
+    <!-- Icon -->
+    <link rel="icon" href="./favicon.ico">
+    <!-- 移动端适配：缩放 & 根元素字体 -->
+    <script>
+        let scale = 1.0 / window.devicePixelRatio;
+        let text = `<meta name="viewport" content="width=device-width, initial-scale=${scale}, maximum-scale=${scale}, minimum-scale=${scale}, user-scalable=no">`
+        document.write(text);
+        document.documentElement.style.fontSize = window.innerWidth / 7.5 + "px";
+        document.documentElement.setAttribute('data-dpr', window.devicePixelRatio + '');
+        document.documentElement.setAttribute('color-theme', 'theme1');
+    </script>
+</head>
+<body>
+    <div id="app"></div>
+</body>
+</html>
