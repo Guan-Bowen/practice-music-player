@@ -1,0 +1,87 @@
+@import "./variable.scss";
+/*根据dpr计算font-size*/
+@mixin font_dpr($font-size){
+  font-size: $font-size;
+  [data-dpr="2"] & { font-size: $font-size * 2;}
+  [data-dpr="3"] & { font-size: $font-size * 3;}
+}
+/*通过该函数设置字体大小，后期方便统一管理；*/
+@mixin font_size($size){
+  @include font_dpr($size);
+}
+// 不换行
+@mixin no-wrap(){
+  text-overflow: ellipsis;  // 以省略号代替溢出的文字
+  overflow: hidden;
+  white-space: nowrap;      // 文本不换行
+}
+// 限制行数
+@mixin clamp($row){
+  overflow:hidden;
+  text-overflow:ellipsis;   // 以省略号代替溢出的文字
+  display:-webkit-box;
+  -webkit-box-orient:vertical;  // -webkit-box 子元素：竖排列
+  -webkit-line-clamp:$row;  // 限制指定的行数
+}
+
+// 根据属性选择器来设置背景颜色
+@mixin bg_color(){
+  background: $background-color-theme1;
+  [color-theme=theme2] & {
+    background: $background-color-theme2;
+  }
+  [color-theme=theme3] & {
+    background: $background-color-theme3;
+  }
+}
+@mixin bg_sub_color(){
+  background: $background-color-sub-theme1;
+  [color-theme=theme2] & {
+    background: $background-color-sub-theme2;
+  }
+  [color-theme=theme3] & {
+    background: $background-color-sub-theme3;
+  }
+}
+
+@mixin font_color(){
+  color: $font-color-theme1;
+  [color-theme=theme2] & {
+    color: $font-color-theme2;
+  }
+  [color-theme=theme3] & {
+    color: $font-color-theme3;
+  }
+}
+@mixin font_active_color(){
+  color: $font-active-color-theme1;
+  [color-theme=theme2] & {
+    color: $font-active-color-theme2;
+  }
+  [color-theme=theme3] & {
+    color: $font-active-color-theme3;
+  }
+}
+
+@mixin border_color(){
+  border-color: $border-color-theme1;
+  [color-theme=theme2] & {
+    border-color: $border-color-theme2;
+  }
+  [color-theme=theme3] & {
+    border-color: $border-color-theme3;
+  }
+}
+
+@mixin bg_img($url){
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url($url + '.png');
+  [data-dpr='2'] & {
+    background-image: url($url + '@2x.png');
+  }
+  [data-dpr='3'] & {
+    background-image: url($url + '@3x.png');
+  }
+}
+

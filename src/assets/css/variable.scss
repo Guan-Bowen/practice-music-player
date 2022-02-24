@@ -1,0 +1,31 @@
+//字体定义规范
+$font-small_s: 25Px;
+$font_small:30Px;
+$font_medium_s:35Px;
+$font_medium:40Px;
+$font_large:45Px;
+
+// 背景颜色规范(主要)
+$background-color-theme1: #d43c33; //背景主题颜色：红
+$background-color-theme2: rgba(34,213,156,1); //背景主题颜色：绿
+$background-color-theme3: #333; //背景主题颜色：深色
+
+// 背景颜色规范(次要)
+$background-color-sub-theme1: #f5f5f5; //背景主题颜色：红
+$background-color-sub-theme2: #f5f5f5;  //背景主题颜色：绿
+$background-color-sub-theme3: #444; //背景主题颜色：深色
+
+// 字体颜色规范(默认)
+$font-color-theme1: #666; //字体主题颜色：红
+$font-color-theme2: #666;//字体主题颜色：绿
+$font-color-theme3: #fff;//字体主题颜色：深色
+
+// 字体颜色规范(激活)
+$font-active-color-theme1: #d43c33; //字体主题颜色：红
+$font-active-color-theme2: rgba(34,213,156,1); //字体主题颜色：绿
+$font-active-color-theme3: #ffcc33;  //字体主题颜色：深色
+
+// 边框颜色
+$border-color-theme1: #d43c33;  //边框主题颜色：红
+$border-color-theme2: rgba(34,213,156,1);  //边框主题颜色：绿
+$border-color-theme3: #ffcc33; //边框主题颜色2(夜间模式)
